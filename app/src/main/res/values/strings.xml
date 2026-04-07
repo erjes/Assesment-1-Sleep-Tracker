@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Assesment 1</string>
+    <string name="app_name">SleepTrack Calculator</string>
+    <string name="input_label">How many hours did you sleep?</string>
+    <string name="quality_label">Sleep Quality</string>
+    <string name="btn_calculate">Calculate Slepp Debt</string>
+    <string name="error_empty">Please enter sleep duration!</string>
+    <string name="menu_history">History</string>
+    <string name="share_text">My sleep debt today is %s hours!</string>
+    <string name="quality_poor">Poor (Restless)</string>
+    <string name="quality_fair">Fair (Enough)</string>
+    <string name="quality_good">Good (Deep Sleep)</string>
+    <string name="error_invalid">Please enter a valid sleep hour!</string>
 </resources>
