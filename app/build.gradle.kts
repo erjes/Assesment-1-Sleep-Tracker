@@ -55,4 +55,14 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
+
+    // WorkManager (Notifikasi)
+    implementation(libs.androidx.work.runtime.ktx)
+
+    // Vico Charts (Grafik)
+    implementation(libs.vico.compose)
+    implementation(libs.vico.compose.m3)
 }
