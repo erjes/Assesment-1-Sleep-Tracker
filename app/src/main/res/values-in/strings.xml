@@ -11,4 +11,13 @@
     <string name="quality_fair">Cukup (Standar)</string>
     <string name="quality_good">Baik (Nyenyak)</string>
     <string name="error_invalid">Masukkan jumlah jam yang valid!</string>
+    <string name="message_saved">Riwayat Tidur Disimpan</string>
+    <string name="message_enough_sleep">Tidur kamu cukup!</string>
+    <string name="debt_today">Hutang hari ini: %1$.1f jam.</string>
+    <string name="message_total_debt">Total hutang tidur kamu: %1$.1f jam.</string>
+    <string name="total_debt_display">Total Hutang Tidur: %1$.1f hours.</string>
+
+    <string name="history_date">Tanggal: %1$s</string>
+    <string name="history_duration">Durasi: %1$.1f Jam</string>
+    <string name="history_debt">Hutang: %1$.1f Jam</string>
 </resources>

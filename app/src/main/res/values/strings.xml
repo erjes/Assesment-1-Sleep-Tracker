@@ -2,7 +2,7 @@
     <string name="app_name">SleepTrack Calculator</string>
     <string name="input_label">How many hours did you sleep?</string>
     <string name="quality_label">Sleep Quality</string>
-    <string name="btn_calculate">Calculate Slepp Debt</string>
+    <string name="btn_calculate">Calculate Sleep Debt</string>
     <string name="error_empty">Please enter sleep duration!</string>
     <string name="menu_history">History</string>
     <string name="share_text">My sleep debt today is %s hours!</string>
@@ -10,4 +10,13 @@
     <string name="quality_fair">Fair (Enough)</string>
     <string name="quality_good">Good (Deep Sleep)</string>
     <string name="error_invalid">Please enter a valid sleep hour!</string>
+    <string name="message_saved">Sleep History Saved</string>
+    <string name="message_enough_sleep">You got enough sleep!</string>
+    <string name="debt_today">Today\'s debt: %1$.1f hours.</string>
+    <string name="message_total_debt">Total accumulated debt: %1$.1f hours.</string>
+    <string name="total_debt_display">Total Sleep Debt: %1$.1f hours.</string>
+
+    <string name="history_date">Date: %1$s</string>
+    <string name="history_duration">Duration: %1$.1f Hours</string>
+    <string name="history_debt">Debt: %1$.1f Hours</string>
 </resources>
