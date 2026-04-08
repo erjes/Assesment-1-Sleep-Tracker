@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SleepTrack Calculator</string>
+    <string name="app_name">Penghitung Hutang Tidur</string>
     <string name="input_label">Berapa jam Anda tidur semalam?</string>
     <string name="quality_label">Kualitas Tidur</string>
     <string name="btn_calculate">Hitung Hutang Tidur</string>

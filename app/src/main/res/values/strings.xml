@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SleepTrack Calculator</string>
+    <string name="app_name">Sleep Debt Calculator</string>
     <string name="input_label">How many hours did you sleep?</string>
     <string name="quality_label">Sleep Quality</string>
     <string name="btn_calculate">Calculate Sleep Debt</string>
