@@ -13,9 +13,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -56,7 +56,11 @@ fun InputScreen(viewModel: SleepViewModel, onNavigateToHistory: () -> Unit) {
             title = { Text(stringResource(R.string.app_name)) },
             actions = {
                IconButton(onClick = onNavigateToHistory) {
-                  Icon(Icons.Default.Info, contentDescription = "History")
+                  Icon(
+                     painter = painterResource(id = R.drawable.history),
+                     contentDescription = "History",
+                     modifier = Modifier.size(24.dp)
+                  )
                }
             }
          )
@@ -73,7 +77,9 @@ fun InputScreen(viewModel: SleepViewModel, onNavigateToHistory: () -> Unit) {
          Image(
             painter = painterResource(id = R.drawable.sleeping),
             contentDescription = null,
-            modifier = Modifier.size(180.dp).padding(bottom = 16.dp)
+            modifier = Modifier
+               .size(180.dp)
+               .padding(bottom = 16.dp)
          )
 
          OutlinedTextField(
@@ -141,9 +147,9 @@ fun InputScreen(viewModel: SleepViewModel, onNavigateToHistory: () -> Unit) {
          if (resultText.isNotEmpty()) {
             Spacer(modifier = Modifier.height(24.dp))
 
-            androidx.compose.material3.ElevatedCard(
+            Card(
                modifier = Modifier.fillMaxWidth(),
-               colors = androidx.compose.material3.CardDefaults.elevatedCardColors(
+               colors = CardDefaults.elevatedCardColors(
                   containerColor = MaterialTheme.colorScheme.primaryContainer
                )
             ) {
