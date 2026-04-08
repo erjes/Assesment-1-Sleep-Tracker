@@ -31,21 +31,6 @@ class SleepDao(private val dbHelper: SleepDatabase) {
         return logs
     }
 
-    fun getLastSevenDays(): List<SleepLog> {
-        val logs = mutableListOf<SleepLog>()
-        val db = dbHelper.readableDatabase
-
-        val sevenDaysAgo = System.currentTimeMillis() - (7 * 24 * 60 * 60 * 1000)
-
-        val cursor = db.rawQuery(
-            "SELECT * FROM ${SleepDatabase.TABLE_NAME} WHERE ${SleepDatabase.COLUMN_DATE} >= ? ORDER BY ${SleepDatabase.COLUMN_DATE} ASC",
-            arrayOf(sevenDaysAgo.toString())
-        )
-
-        parseCursor(cursor, logs)
-        return logs
-    }
-
     fun getTotalDebt(): Double {
         val db = dbHelper.readableDatabase
         val cursor = db.rawQuery("SELECT SUM(${SleepDatabase.COLUMN_DEBT}) FROM ${SleepDatabase.TABLE_NAME}", null)
