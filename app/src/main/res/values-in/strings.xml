@@ -20,4 +20,8 @@
     <string name="history_date">Tanggal: %1$s</string>
     <string name="history_duration">Durasi: %1$.1f Jam</string>
     <string name="history_debt">Hutang: %1$.1f Jam</string>
+
+    <string name="btn_share">Bagikan Status</string>
+    <string name="share_message">Total hutang tidur adalah %1$.1f jam. Saya harus tidur lebih awal!</string>
+
 </resources>

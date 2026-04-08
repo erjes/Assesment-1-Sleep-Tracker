@@ -19,4 +19,8 @@
     <string name="history_date">Date: %1$s</string>
     <string name="history_duration">Duration: %1$.1f Hours</string>
     <string name="history_debt">Debt: %1$.1f Hours</string>
+
+    <string name="btn_share">Share Status</string>
+    <string name="share_message">Total sleep debt is %1$.1f hours. I need to sleep better!</string>
+
 </resources>

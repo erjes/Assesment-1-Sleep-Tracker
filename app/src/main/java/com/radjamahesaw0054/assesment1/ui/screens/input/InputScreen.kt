@@ -1,5 +1,6 @@
 package com.radjamahesaw0054.assesment1.ui.screens.input
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -10,9 +11,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -21,6 +26,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -168,6 +174,29 @@ fun InputScreen(viewModel: SleepViewModel, onNavigateToHistory: () -> Unit) {
                      style = MaterialTheme.typography.bodyLarge,
                      color = MaterialTheme.colorScheme.onPrimaryContainer
                   )
+                  Spacer(modifier = Modifier.height(16.dp))
+
+                  OutlinedButton(
+                     modifier = Modifier.fillMaxWidth(),
+                     shape = RoundedCornerShape(12.dp),
+                     onClick = {
+                        val totalDebt = viewModel.getTotalDebt()
+                        val sendMsg = context.getString(R.string.share_message, totalDebt)
+
+                        val sendIntent: Intent = Intent().apply {
+                           action = Intent.ACTION_SEND
+                           putExtra(Intent.EXTRA_TEXT, sendMsg)
+                           type = "text/plain"
+                        }
+
+                        val shareIntent = Intent.createChooser(sendIntent, null)
+                        context.startActivity(shareIntent)
+                     }
+                  ) {
+                     Icon(Icons.Default.Share, contentDescription = null, modifier = Modifier.size(18.dp))
+                     Spacer(Modifier.width(8.dp))
+                     Text(stringResource(R.string.btn_share))
+                  }
                }
             }
          }
